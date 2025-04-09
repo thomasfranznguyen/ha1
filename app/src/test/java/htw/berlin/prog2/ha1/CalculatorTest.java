@@ -119,7 +119,7 @@ class CalculatorTest {
         calc.pressDigitKey(4);
         calc.pressEqualsKey();
 
-        String expected = "13"; // but was <8>
+        String expected = "13"; // but was "8"
         String actual = calc.readScreen();
         //test
         assertEquals(expected, actual);
