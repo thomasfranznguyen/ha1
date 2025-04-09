@@ -106,5 +106,23 @@ class CalculatorTest {
         //test
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("should display result after multiplying two negative single-digit numbers")
+    void testMultiplicationBeforeAddition() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(5);
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(2);
+        calc.pressBinaryOperationKey("x");
+        calc.pressDigitKey(4);
+        calc.pressEqualsKey();
+
+        String expected = "13"; // but was <8>
+        String actual = calc.readScreen();
+        //test
+        assertEquals(expected, actual);
+    }
 }
 
