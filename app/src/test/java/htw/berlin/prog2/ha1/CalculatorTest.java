@@ -90,5 +90,21 @@ class CalculatorTest {
 
 
     //TODO hier weitere Tests erstellen
+
+    @Test
+    @DisplayName("should display result after multiplying two positive single-digit numbers")
+    void testPositiveMultiplication() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(2);
+        calc.pressBinaryOperationKey("x");
+        calc.pressDigitKey(2);
+        calc.pressEqualsKey();
+
+        String expected = "4";
+        String actual = calc.readScreen();
+        //test
+        assertEquals(expected, actual);
+    }
 }
 
