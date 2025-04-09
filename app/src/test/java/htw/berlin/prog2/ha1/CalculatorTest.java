@@ -108,7 +108,7 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("should display result after multiplying two negative single-digit numbers")
+    @DisplayName("should display result after multiplying two single-digit numbers, followed by adding a single-digit number")
     void testMultiplicationBeforeAddition() {
         Calculator calc = new Calculator();
 
