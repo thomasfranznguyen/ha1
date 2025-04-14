@@ -126,7 +126,7 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("should display ERROR after pressing 0 and 1/x successively")
     void testUnaryOperationKey(){
         Calculator calc = new Calculator();
 
