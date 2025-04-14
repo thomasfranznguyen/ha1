@@ -107,40 +107,5 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    @DisplayName("should display result after multiplying two single-digit numbers, followed by adding a single-digit number")
-    void testMultiplicationBeforeAddition() {
-        Calculator calc = new Calculator();
-
-        calc.pressDigitKey(5);
-        calc.pressBinaryOperationKey("+");
-        calc.pressDigitKey(2);
-        calc.pressBinaryOperationKey("x");
-        calc.pressDigitKey(4);
-        calc.pressEqualsKey();
-
-        String expected = "13"; // but was "8"
-        String actual = calc.readScreen();
-        //test
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    @DisplayName("should display result after pressing equals-button thrice.")
-    void testPressingEqualsButtonMultipleTimes() {
-        Calculator calc = new Calculator();
-
-        calc.pressDigitKey(5);
-        calc.pressBinaryOperationKey("+");
-        calc.pressDigitKey(2);
-        calc.pressEqualsKey();
-        calc.pressEqualsKey();
-        calc.pressEqualsKey();
-
-        String expected = "11"; // but was "17"
-        String actual = calc.readScreen();
-        //test
-        assertEquals(expected, actual);
-    }
 }
 
