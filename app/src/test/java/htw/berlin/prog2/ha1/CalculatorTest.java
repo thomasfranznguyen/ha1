@@ -124,5 +124,20 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("")
+    void testUnaryOperationKey(){
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(0);
+        calc.pressUnaryOperationKey("1/x");
+
+        String expected = "Error"; // but was "Infinity"
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
+
 }
 
