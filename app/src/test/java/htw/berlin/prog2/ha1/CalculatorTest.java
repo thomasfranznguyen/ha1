@@ -107,5 +107,22 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("should display result after adding two single-digit numbers, followed by subtracting a single-digit number")
+    void testPlusAndMinus() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(5);
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(4);
+        calc.pressBinaryOperationKey("-");
+        calc.pressDigitKey(2);
+        calc.pressEqualsKey();
+
+        String expected = "7"; // but was "2"
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
 }
 
